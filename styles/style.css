@@ -15,6 +15,17 @@
         --text-color: light-dark(#000000, #ffffff);
        
     }
+
+    html{
+font-family: "open sans", sans-serif;
+font-size: 100%;
+color: var(--text-color)
+    }
+
+body {
+background-color: var(--bg-color);
+
+    }
 .header {
     background-image: url("../images/header-2560w.webp");
     background-size: cover;
@@ -22,4 +33,15 @@
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
     }
+.header__nav {
+    text-align: center;
+    
+    }
+
+.header__link {
+    display: inline-block;
+text-align: center;
+padding-top: 1em;
+    }
+
 }
