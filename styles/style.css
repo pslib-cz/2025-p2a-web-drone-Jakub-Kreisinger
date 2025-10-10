@@ -4,44 +4,91 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
 
-@layer design {
+@layer init {
     :root {
         color-scheme: light dark;
 
-        --header-bg-color: light-dark (#3b3e40, #3b3e40);
-        --text-header-color : light-dark(#ffffff, #ffffff);
-        --primary-color:  light-dark (#66d4d4, #138585);
+        --header-bg-color: light-dark(#3b3e40, #3b3e40);
+        --text-header-color: light-dark(#ffffff, #ffffff);
+        --primary-color: light-dark(#66d4d4, #138585);
         --secondary-color: light-dark(#ffffff, #ffffff);
-        --text-color: light-dark(#000000, #ffffff);
+        --text-color: light-dark(#ffffff, #000000);
+        --bg-color: light-dark(#f0f0f0, #121212);
        
     }
 
     html{
-font-family: "open sans", sans-serif;
-font-size: 100%;
-color: var(--text-color)
+        font-family: "open sans", sans-serif;
+        font-size: 100%;
+        color: var(--text-color)
+    }
+@layer design {
+    body {
+        background-color: var(--bg-color);
+
+    }
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1em;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: extra-bold;
     }
 
-body {
-background-color: var(--bg-color);
-
-    }
-.header {
-    background-image: url("../images/header-2560w.webp");
-    background-size: cover;
-    background-position: top left;
-    background-color: var(--header-bg-color);
-    color: var(--header-text-color);
-    }
-.header__nav {
+.img-fluid {
+    width: 100%;
+    display: block;
+    height: auto;    
+}
+.img-block {
+    margin: 0 auto;
+    display: block;
+}
+.img-block__caption {
     text-align: center;
+    margin-top: 0.25em;
+}
+    .header {
+        background-image: url("../images/header-2560w.webp");
+        background-size: cover;
+        background-position: top left;
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        padding: 1em;
+    }
+    .header__nav {
+        text-align: center;
     
     }
 
-.header__link {
-    display: inline-block;
-text-align: center;
-padding-top: 1em;
+    .header__link {
+        display: inline-block;
+        text-align: center;
+        padding-top: 1em;
+        display: inline-block;
     }
+    .header__intro {
+        margin-top: 10vh;
 
+    }
+    .button {
+         display: inline-block;
+        border-radius: .5em;
+        padding: 0.75em 2em;
+        text-decoration: none0;
+    }
+.button--light {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+.heading__h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 36px;
+   
+}
+
+    }
 }
