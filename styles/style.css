@@ -1,94 +1,114 @@
 @layer reset, init, design;
 
 @import url(./normalize.css) layer(reset);
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
 
 @layer init {
     :root {
         color-scheme: light dark;
-
-        --header-bg-color: light-dark(#3b3e40, #3b3e40);
-        --text-header-color: light-dark(#ffffff, #ffffff);
-        --primary-color: light-dark(#66d4d4, #138585);
-        --secondary-color: light-dark(#ffffff, #ffffff);
-        --text-color: light-dark(#ffffff, #000000);
-        --bg-color: light-dark(#f0f0f0, #121212);
-       
+        --header-bg-color: light-dark(#3B3D40, #3B3D40);
+        --header-text-color: light-dark(#fff, #fff);
+        --primary-color: light-dark(#66D4D4, #2b5a5a);
+        --seccondary-color: light-dark(#fff, #fff);
+        --text-color: light-dark(#000, #fff);
+        --bg-color: light-dark(#fff, #000);
+        --text-color-black: #000;
+        --text-color-light: #fff;
     }
-
-    html{
-        font-family: "open sans", sans-serif;
+    html {
+        font-family: 'Open Sans', sans-serif;
         font-size: 100%;
-        color: var(--text-color)
+        color: var(--text-color);
     }
+}
+
 @layer design {
     body {
         background-color: var(--bg-color);
-
     }
-    main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 1em;
-    }
-    h1 {
-        font-size: 4rem;
-        font-weight: extra-bold;
-    }
-
-.img-fluid {
-    width: 100%;
-    display: block;
-    height: auto;    
-}
-.img-block {
-    margin: 0 auto;
-    display: block;
-}
-.img-block__caption {
-    text-align: center;
-    margin-top: 0.25em;
-}
     .header {
-        background-image: url("../images/header-2560w.webp");
+        padding: 1rem;
+        background-image: url('../images/header-2560w.webp');
         background-size: cover;
         background-position: top left;
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
-        padding: 1em;
-    }
-    .header__nav {
-        text-align: center;
-    
-    }
-
-    .header__link {
-        display: inline-block;
-        text-align: center;
-        padding-top: 1em;
-        display: inline-block;
+        line-height: 1.5;
     }
     .header__intro {
         margin-top: 10vh;
-
+    }
+    .header__nav {
+        text-align: center;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: extra-bold; 
+    }
+    h2{
+        font-size: 2.25rem;
+        font-weight: bold;
     }
     .button {
-         display: inline-block;
-        border-radius: .5em;
+        display: inline-block;
+        border-radius: 0.5rem;
         padding: 0.75em 2em;
-        text-decoration: none0;
     }
-.button--light {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-}
-.heading__h3 {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 36px;
-   
-}
-
+    .button--primary{
+        background-color: var(--primary-color);
+        text-decoration: none;
+        color: var(--text-color-light);
+    }
+    .button--light {
+        background-color: var(--seccondary-color);
+        color: var(--text-color-black);
+       text-decoration: none;
+    }
+    main {
+        padding: 1rem;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .img-fluid {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .img-block {
+        margin: 0;
+    }
+    .img-block__caption {
+        text-align: center;
+        margin-top: 0.5em;
+    }
+    .heading {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+    }
+    .heading--h3 {
+        font-size: 1.125em;
+    }
+    .info-block {
+        margin: 1em 0;
+        padding: 1rem;
+        border: 3px solid var(--primary-color);
+    }
+    .info-block__title {
+        margin-bottom: 1.5em;
+    }
+    .feature-block {
+        margin: 2rem 0;
+    }
+    .feature-list__item {
+        margin: 1rem 0;
+    }
+    .feature-list__item::marker {
+        color: var(--primary-color);
+    }
+    .card {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0 3.75rem 0 0;
+        width: 17.5em;
     }
 }
