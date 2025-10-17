@@ -1,94 +1,105 @@
 @layer reset, init, design;
 
 @import url(./normalize.css) layer(reset);
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
 
 @layer init {
     :root {
         color-scheme: light dark;
-
-        --header-bg-color: light-dark(#3b3e40, #3b3e40);
-        --text-header-color: light-dark(#ffffff, #ffffff);
-        --primary-color: light-dark(#66d4d4, #138585);
-        --secondary-color: light-dark(#ffffff, #ffffff);
-        --text-color: light-dark(#ffffff, #000000);
-        --bg-color: light-dark(#f0f0f0, #121212);
-       
+        --header-bg-color: light-dark(#3e3b40, #3B3E40);
+        --header-text-color: light-dark(#fff, #fff);
+        --primary-color: light-dark(#66D4D4, #2b5a5a);
+        --secondary-color: light-dark(#fff, #fff);
+        --text-color: light-dark(#000, #fff);
+        --secondary-text-color: light-dark(#fff, #fff);
+        --bg-color: light-dark(#fff, #000);
     }
-
-    html{
-        font-family: "open sans", sans-serif;
-        font-size: 100%;
+    html {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%; /* default 16px */
         color: var(--text-color)
     }
+}
+
 @layer design {
     body {
         background-color: var(--bg-color);
-
+        
     }
     main {
-        max-width: 960px;
         margin: 0 auto;
-        padding: 1em;
+        max-width: 960px;
+        padding: 1rem;
     }
     h1 {
-        font-size: 4rem;
-        font-weight: extra-bold;
+        font-size: 4rem; /* 60 px default */
+        font-weight: 800; /* extra-bold */
     }
-
-.img-fluid {
-    width: 100%;
-    display: block;
-    height: auto;    
-}
-.img-block {
-    margin: 0 auto;
-    display: block;
-}
-.img-block__caption {
-    text-align: center;
-    margin-top: 0.25em;
-}
+    li::marker {
+        color: var(--primary-color)
+    }
+    .img-fluid {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     .header {
-        background-image: url("../images/header-2560w.webp");
+        background-image: url('../images/header-2560w.webp');
         background-size: cover;
         background-position: top left;
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
+        line-height: 1.5;
         padding: 1em;
     }
     .header__nav {
         text-align: center;
+    }
     
-    }
 
-    .header__link {
-        display: inline-block;
-        text-align: center;
-        padding-top: 1em;
-        display: inline-block;
-    }
+    
     .header__intro {
         margin-top: 10vh;
-
+        text-align: left;
+        padding: 2rem;
     }
     .button {
-         display: inline-block;
-        border-radius: .5em;
+        border-radius: 0.5rem;
         padding: 0.75em 2em;
-        text-decoration: none0;
+        text-decoration: none;
     }
-.button--light {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-}
-.heading__h3 {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 36px;
-   
-}
-
+    .button--light {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        font-weight: bold;
     }
-}
+    .img-block {
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+    .img-block__caption {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    .info-block {
+        margin: 0;
+        padding: 0.5rem;
+        border: 3px;
+        border-style: solid;
+        border-color: var(--primary-color)
+    }
+     
+        
+    
+    .card {
+        padding-bottom: 4rem;
+    }
+    .button1 {
+        background-color: var(--primary-color);
+        color: var(--secondary-text-color);
+    }
+    
+    .list__item::marker {
+        color: var(--primary-color);
+    }
+}   
