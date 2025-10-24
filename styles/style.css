@@ -163,4 +163,14 @@ layer(setup);
     display: inline-block;
     max-width: 17.5em;
   }
+.gallery {
+   box-sizing: border-box;
+   margin-top: 1em;
+  }
+
+.gallery__item {
+   width: 50%;
+   display: inline-block;
+  }
+
 }
